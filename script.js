@@ -18,18 +18,25 @@ function getPromise() {
 
 function init() {
   getPromise();
+  useTryNCatch();
+}
+
+// ###############################################################################################
+// Try and Catch kann nicht nur für Promises sondern für alle anderen Dinge verwendet werden, wo damit zu rechnen ist, das es ein Error in der Konsole entstehen könnte, um die Error abzufangen.
+
+function useTryNCatch() {
+  try {
+    console.log(fetchData());
+    
+  } catch (error) {
+    console.log("reading not possible"); 
+  }
 }
 
 
-try {
-  
-} catch (error) {
-  
-}
 
 
-
-// #########################################################
+// #####################################################################################
 
 // asynchrone funktion deklarieren
 
@@ -48,8 +55,9 @@ async function fetchData() {
 
 }
 
+// ----> um die Daten global zur Verfügung zu stellen, muss man vorher eine Variable nur deklarieren, und diese dann aus der asynchronen funktion heraus initialisieren.
 
-  // -----> so wird jetzt auf die fetchData und dem daraus resultierenden JSON Objekt global zugegriffen:
 
+  // ####################################################################################
 
-  const jsonData = await fetchData();
+  // EIGENE JSON FETCHEN

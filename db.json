@@ -1,0 +1,10 @@
+{
+  "name": "Richard",
+  "pet": {
+    "pet-kind": "dog",
+    "pet-name": "Marly"
+  },
+  "hobby": "Travelling",
+  "age": 36,
+  "currently-travelling": true
+}
