@@ -31,7 +31,7 @@ try {
 
 // #########################################################
 
-// asynchrone funcktion deklarieren
+// asynchrone funktion deklarieren
 
 async function fetchData() {
   
@@ -39,7 +39,7 @@ async function fetchData() {
 
   if (!response.ok) return;  // wenn keine Verbindung zum Server hergestellt wurde, wird returned (Funktion abgebrochen)
 
-// -----> somit wurde insgesamt sichergestellt, das eine Verbindung zum Server bereitsteht und bestätigt wurde  -----> weiter zum nächsten Schritt.
+  // -----> somit wurde insgesamt sichergestellt, das eine Verbindung zum Server bereitsteht und bestätigt wurde  -----> weiter zum nächsten Schritt.
 
 
   const data = await response.json(); // hiermit wird jetzt auf die Daten zugegriffen die unter dieser API gespeichert sind zu und speichern diese in der variablen data im validen json format.
@@ -49,8 +49,7 @@ async function fetchData() {
 }
 
 
+  // -----> so wird jetzt auf die fetchData und dem daraus resultierenden JSON Objekt global zugegriffen:
 
-// -----> so wird jetzt auf die fetchData und dem daraus resultierenden JSON Objekt global zugegriffen:
 
-
-const jsonData = await fetchData();
+  const jsonData = await fetchData();
