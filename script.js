@@ -83,8 +83,9 @@ async function filterShowFruits() {
 
   let fruitsContentRef = document.getElementById("fruits-container");
   fruitsContentRef.innerHTML = "";
+
   for (let index = 0; index < fruitsObject.length; index++) {
-    if (fruitsObject[index].name.toLowerCase().startsWith(filter.toLowerCase()) && filter.length > 0) {
+    if (fruitsObject[index].name.toLowerCase().startsWith(filter.toLowerCase()) && filter.length > 2) {
       let fruitDiv = document.createElement("div");
       fruitDiv.innerHTML =
         "Frucht Nr." + index + " = " + fruitsObject[index].name + ". The sugar is about " + fruitsObject[index].nutritions.sugar + "g per 100g Fruit.";
